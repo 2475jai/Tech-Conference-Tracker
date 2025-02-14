@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Session</title>
+</head>
+<body>
+    <h1>Add Session for {{ conference.name }}</h1>
+    <form method="POST">
+        <label>Session Title:</label>
+        <input type="text" name="title" required>
+
+        <label>Speaker:</label>
+        <input type="text" name="speaker" required>
+
+        <label>Time:</label>
+        <input type="time" name="time" required>
+
+        <button type="submit">Add Session</button>
+    </form>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>

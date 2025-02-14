@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Conference Tracker</title>
+</head>
+<body>
+    <h1>Tech Conference Tracker</h1>
+    <a href="{{ url_for('add_conference') }}">Add Conference</a>
+    <ul>
+        {% for conf in conferences %}
+            <li>
+                <strong>{{ conf.name }}</strong> ({{ conf.location }}, {{ conf.date }})
+                - Tickets: {{ "Available" if conf.tickets_available else "Sold Out" }}
+                <ul>
+                    {% for session in conf.sessions %}
+                        <li>{{ session.title }} - {{ session.speaker }} at {{ session.time }}</li>
+                    {% endfor %}
+                </ul>
+                <a href="{{ url_for('add_session', conference_name=conf.name) }}">Add Session</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
