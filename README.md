@@ -1,10 +1,6 @@
 # Tech-Conference-Tracker
  A console-based system for tracking tech conferences, including event dates, speakers, sessions, and ticket status.
-
-# Tech Conference Tracker
-
-A Flask-based application designed to help track and manage tech conferences. This system allows users to monitor event details, including dates, locations, speakers, and ticket availability.
-
+ 
 ## Features
 - Manage a list of tech conferences
 - Track sessions and speakers
